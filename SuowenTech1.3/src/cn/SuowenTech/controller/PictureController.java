@@ -18,8 +18,7 @@ public class PictureController {
 	@Resource
 	private PictureService pictureService;
 	
-	@RequestMapping(value = "find",method=RequestMethod.GET ,produces="application/json;charset=utf-8")
-	@ResponseBody
+	@RequestMapping(value = "find")
 	public String getPicture(@RequestParam("picture_id") int picture_id){
 		return pictureService.findPictureById(picture_id);		
 	}

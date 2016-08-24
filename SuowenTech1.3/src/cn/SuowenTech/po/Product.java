@@ -7,9 +7,9 @@ import java.util.Date;
 public class Product {
 	
 	private int product_id;
-	private String product_nameString;
+	private String product_name;
 	private String product_describe;
-	private Date product_start_timeDate;
+	private Date product_start_time;
 	private int picture_id;
 	private int admin_id;
 	public int getProduct_id() {
@@ -18,23 +18,25 @@ public class Product {
 	public void setProduct_id(int product_id) {
 		this.product_id = product_id;
 	}
-	public String getProduct_nameString() {
-		return product_nameString;
-	}
-	public void setProduct_nameString(String product_nameString) {
-		this.product_nameString = product_nameString;
-	}
+	
 	public String getProduct_describe() {
 		return product_describe;
 	}
 	public void setProduct_describe(String product_describe) {
 		this.product_describe = product_describe;
 	}
-	public Date getProduct_start_timeDate() {
-		return product_start_timeDate;
+	
+	public String getProduct_name() {
+		return product_name;
 	}
-	public void setProduct_start_timeDate(Date product_start_timeDate) {
-		this.product_start_timeDate = product_start_timeDate;
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+	public Date getProduct_start_time() {
+		return product_start_time;
+	}
+	public void setProduct_start_time(Date product_start_time) {
+		this.product_start_time = product_start_time;
 	}
 	public int getPicture_id() {
 		return picture_id;
@@ -48,14 +50,15 @@ public class Product {
 	public void setAdmin_id(int admin_id) {
 		this.admin_id = admin_id;
 	}
-	
 	@Override
 	public String toString() {
-		return "product [product_id=" + product_id + ", product_nameString="
-				+ product_nameString + ", product_describe=" + product_describe
-				+ ", product_start_timeDate=" + product_start_timeDate
+		return "Product [product_id=" + product_id + ", product_name="
+				+ product_name + ", product_describe=" + product_describe
+				+ ", product_start_time=" + product_start_time
 				+ ", picture_id=" + picture_id + ", admin_id=" + admin_id + "]";
 	}
+	
+
 	
 	
 	
