@@ -1,0 +1,316 @@
+﻿body,ul,p,img {
+    padding: 0;
+    margin: 0;
+}    
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    border: none;
+}
+body {
+    width: 100%;
+}
+
+#body {
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+}
+/*头部*/
+#header {
+    background: url(../images/top.png);
+    height: 393px;
+}
+
+.mask {
+    height: 393px;
+    background: #000000;
+    opacity:0.75;
+    box-sizing:border-box;
+    padding: 18px 38px 0;
+}
+#header img {
+    position: absolute;
+    top: 12px;
+    left: 38px;
+}
+#header .logo {
+    float: left;
+    margin-left: 28px;
+    color: #ffffff;
+    font: 12.5px 微软雅黑;
+}
+#header .menu {
+    float: right;
+}
+#header li {
+    float: left;
+    margin-left: 28px;
+}
+
+#header a {
+    color: #ffffff;
+    font: 8.33px 微软雅黑;
+}
+
+#header .title {
+    margin-top: 123px;
+}
+
+#header .title p {
+    text-align: center;
+    color: #ffffff;
+}
+
+.welcome {
+    font-size: 6.25px;
+}
+.name {
+    margin-top: 16px;
+    font-size: 33.33px;
+}
+.introduce {
+    margin-top: 8px;
+    font-size: 16.67px;
+}
+
+
+/*中部*/
+#content {
+    overflow: hidden;
+    background: #ffffff;
+    height: 990px;
+}
+
+#content .title {
+    margin-top: 54px;
+}
+#content .title p{
+    text-align: center;
+    font: 20.83px 微软雅黑;
+}
+
+#content .picture {
+    float: right;
+    margin: 46px 90px 0 0;
+    width: 758px;
+    height: 644px;
+}
+
+.pic1 {
+    height: 298px;
+}
+.pic2 {
+    margin-top: 48px;
+    height: 298px;
+}
+.view {
+    background: url(../images/1.png) repeat;
+}
+
+.black {
+    width: 100%;
+    height: 0;
+    background: #000000;
+    opacity: 0.75;
+    transition: all 2s ease;
+}
+.black input {
+    
+    text-align: center;
+    display: none;
+    background-color: #37b1ca;
+    color: #ffffff;
+    font: 6.16px '微软雅黑';
+}
+
+.view:hover .black {
+    height: 100%;  
+}
+
+.view:hover .black input {
+    display: block;
+    margin: auto;
+
+}
+
+.img1 {
+    height: 100%;
+    width: 204px;
+    float: left;
+}
+.div1,.div2 {
+    float: left;
+    margin-left: 19px;
+    height: 100%;
+}
+
+.div1 {
+    width: 284px;
+}
+.div2{
+    width: 232px;
+}
+
+.img3,.img5,.img7,.img8,.img11 {
+    margin-top: 18px;
+}
+.img2,.img3 {
+    height: 140px;
+    width: 284px;
+}
+.img4{
+    width: 232px;
+    height: 198px;
+}
+.img5 {
+    width: 232px;
+    height: 80px;
+}
+.div3 {
+    width: 312px;
+    float: left;
+}
+.div4 {
+    width: 198px;
+    float: left;
+}
+.img9 {
+    width: 208px;
+    margin: 0 20px 0;
+    height: 100%;
+    float: left;
+}
+.img6 {
+    width: 312px;
+    height: 195px;
+}
+.img7,.img8 {
+    width: 145px;
+    height: 85px;
+    float: left;
+}
+.img8 {
+    margin-left: 20px;
+}
+.img10,.img11 {
+    width: 198px;
+    height: 140px;
+}
+
+#content .nav {
+    float: left;
+    margin-top: 33px;
+    margin-left: 52px;
+    /*background: red;*/
+    width: 80px;
+    height: 504px;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    background-color: #3ecdc5;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+.rect {
+    width: 13px;
+    height: 46px;
+    background-color: #3ecdc5;
+    margin: -2px 0 0 22px;
+}
+.rounded-rectangle {
+    text-align: center;
+    width: 52px;
+    height: 32px;
+    margin-left: 28px;
+    background-color: #e2e2e2;
+    border-radius: 10%;
+    transition: all 1s ease-in-out;
+}
+
+.rounded-rectangle a{
+    color: #000000;
+    font: 10.19px '微软雅黑';
+    line-height: 32px;
+}
+
+.rounded-rectangle:hover {
+    margin-left: 0;
+    background-color: #3ecdc5;
+}
+.rectangle {
+    width: 13px;
+    height: 19px;
+    background-color: #3ecdc5;
+    margin-left: 22px;
+}
+/*底部*/
+#footer {
+    overflow: hidden;
+    height: 419px;
+    background: #141414;
+}
+#footer .title {
+    width: 300px;
+    margin: 60px auto;
+}
+
+#footer .title p {
+    text-align: center;
+    font: 10.24px 微软雅黑;
+    color: #ffffff;
+}
+
+#footer ul{
+    overflow: hidden;
+}
+
+#footer li{
+    float: left;
+    border-right: 2px solid #35aac2;
+    font: 10.24px 微软雅黑;
+    color: #ffffff;
+}
+
+#footer .no{
+    border:0;
+}
+
+.record {
+    float: left;
+    width: 366px;
+    height: 142px;
+    margin-top: -12px;
+    margin-left: 177px;
+}
+
+
+.record p,.record a{
+    font: 10.24px 微软雅黑;
+    color: #ffffff;
+}
+
+.code {
+    float: right;
+    width: 75px;
+    margin: 15px 209px 0 0;
+}
+.code p {
+    color: #ffffff;
+    font: 6.9px '微软雅黑';
+    text-align: center;
+}
+.code img {
+    margin-bottom: 12px;
+    height: 75px;
+}
