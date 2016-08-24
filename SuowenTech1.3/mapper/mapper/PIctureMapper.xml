@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="cn.SuowenTech.Dao.PictureDao">
+
+	<select id="findAllPictureInfo" resultType="map">
+		select * from
+		picture;
+	</select>
+
+
+	<select id="findPictureById" parameterType="int" resultType="String">
+		select * from picture where picture_id=#{picture_id}
+	</select>
+
+
+	<insert id="addPicture" parameterType="String">
+
+		<!-- 插入数据的主键返回 -->
+		<selectKey keyProperty="picture_id" order="AFTER"
+			resultType="int">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into picture(picture_url) values(#{picture_url})
+	</insert>
+
+
+
+	<update id="updatePicture" parameterType="map">
+		UPDATE picture set picture_url=#{picture_url} where picture_id=#{picture_id}
+	</update>
+
+</mapper>
