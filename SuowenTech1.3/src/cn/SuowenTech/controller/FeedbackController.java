@@ -28,7 +28,7 @@ public class FeedbackController {
 	private FeedbackService feedbackService;
 
 	@RequestMapping("/add")
-	public void addFeedback(@RequestBody JSONObject request) {
+	public String addFeedback(@RequestBody JSONObject request) {
 
 		String feedback_name = request.getString("feedback_name");
 		String feedback_email = request.getString("feedback_email");
@@ -40,13 +40,18 @@ public class FeedbackController {
 		feedbackInfo.put("feedback_email", feedback_email);
 		feedbackInfo.put("feedback_phone", feedback_phone);
 		feedbackInfo.put("feedback_content", feedback_content);
-
+		
+		JSONObject result = new JSONObject();
 		try {
 			feedbackService.addFeedback(feedbackInfo);
+			result.put("state", "1");
+			
 		} catch (FeedbackAddException e) { // TODO Auto-generated catch block
 			e.printStackTrace();
+			result.put("state", "0");
 		}
-
+		
+		return result.toJSONString();
 	}
 
 	/*
