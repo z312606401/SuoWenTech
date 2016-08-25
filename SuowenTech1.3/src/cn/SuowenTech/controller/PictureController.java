@@ -3,6 +3,7 @@ package cn.SuowenTech.controller;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,7 +20,10 @@ public class PictureController {
 	private PictureService pictureService;
 	
 	@RequestMapping(value = "find")
-	public String getPicture(@RequestParam("picture_id") int picture_id){
-		return pictureService.findPictureById(picture_id);		
+	public Model getPicture(@RequestParam("picture_id") int picture_id,Model model){
+		
+		String picture_url = pictureService.findPictureById(picture_id);
+		model.addAttribute("picture_url", picture_url);
+		return model;
 	}
 }
